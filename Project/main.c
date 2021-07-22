@@ -7,7 +7,7 @@
 int state;
 int pin1=8;
 int pin2=9;
-int pin3=10;Page 37 of 51
+int pin3=10;
 int pin4=11;
 int pin5=12;
 int timer = 100;
@@ -23,7 +23,7 @@ void loop(){
 	if(Serial.available()>=0)
 	{
 		state = Serial.read();
-		if(state == '1')Page 38 of 51
+		if(state == '1')
 		{
 			digitalWrite(8, HIGH);
 			delay(1000);
@@ -38,7 +38,7 @@ void loop(){
 		if(state == '3')
 		{
 			digitalWrite(10, HIGH);
-			delay(1000);Page 39 of 51
+			delay(1000);
 			state=0;
 		}
 		if(state == '4')
@@ -54,7 +54,7 @@ void loop(){
 			state=0;
 		}
 		if(state=='13')
-		{Page 40 of 51
+		
 			digitalWrite(13,HIGH);
 			delay(1000);
 			state=0;
@@ -70,7 +70,7 @@ void loop(){
 					// turn the pin on:
 					digitalWrite(thisPin, HIGH);
 					delay(timer);
-					// turn the pin off:Page 41 of 51
+					// turn the pin off:
 					digitalWrite(thisPin, LOW);
 				}
 				// loop from the highest pin to the lowest:
@@ -82,7 +82,7 @@ void loop(){
 					// turn the pin off:
 					digitalWrite(thisPin, LOW);
 				} } }
-				if(state=='7')Page 42 of 51
+				if(state=='7')
 				{
 					digitalWrite(8,LOW);
 				}
@@ -98,7 +98,7 @@ void loop(){
 				{
 					digitalWrite(11,LOW);
 				}
-				if(state=='11')Page 43 of 51
+				if(state=='11')
 				{
 					digitalWrite(12,LOW);
 				} } }
